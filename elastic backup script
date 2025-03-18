@@ -1,0 +1,12 @@
+curl -X PUT "localhost:9200/_snapshot/snapshot-s5-repo?pretty" -H 'Content-Type: application/json' -d'
+{
+  "type": "s3",
+  "settings": {
+    "bucket": "s3 bucket name ",
+    "region": "us-east-1",
+    "base_path": "elgbackup/",
+    "max_snapshot_bytes_per_sec": "500mb",
+    "max_restore_bytes_per_sec": "1gb"
+  }
+}
+'
