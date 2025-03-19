@@ -3,8 +3,8 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: nginx-yamil
-  name: nginx-yamil
+    run: nginx-yaml
+  name: nginx-yaml
 spec:
   containers:
   - image: nginx
