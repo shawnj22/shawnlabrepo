@@ -1,5 +1,5 @@
-clusterName: elasticsearch-cluster
-nodeGroup: master
+clusterName: "elasticsearch-cluster"
+nodeGroup: "master"
 
 roles:
   master: "true"
@@ -10,7 +10,7 @@ replicas: 4
 
 esConfig:
   elasticsearch.yml: |
-    cluster.name: my-elasticsearch-cluster
+    cluster.name: "elasticsearch-cluster"
     node.name: es-node-1
     discovery.seed_hosts: ["es-node-1", "es-node-2", "es-node-3" ,"es-node-4"]
     cluster.initial_master_nodes: ["es-node-1", "es-node-2", "es-node-3" ,"es-node-4" ]
