@@ -2,9 +2,9 @@ clusterName: elasticsearch-cluster
 nodeGroup: master
 
 roles:
-  master: true
-  ingest: true
-  data: true
+  master: "true"
+  ingest: "true"
+  data: "true"
 
 replicas: 4
 
