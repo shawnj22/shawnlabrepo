@@ -1,0 +1,9 @@
+volumeClaimTemplates:
+  - metadata:
+      name: elasticsearch-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: local-path   # <-- Add this line
+      resources:
+        requests:
+          storage: 5Gi
