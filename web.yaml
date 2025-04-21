@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: pod
 metadata:
-  name: public-service
+  name: web
 spec:
   selector:
     app: public-pod
