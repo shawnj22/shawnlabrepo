@@ -9,4 +9,12 @@ spec:
   containers:
   - image: nginx
     name: nginx
-    
+ spec:
+  selector:
+    app: public-pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
+   
