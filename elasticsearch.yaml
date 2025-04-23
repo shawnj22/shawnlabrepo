@@ -14,7 +14,7 @@ spec:
       volumeMounts:
       - name: elastic-config
         mountPath:/config
-    volumes:
-      - name: elasticsearch-config
-        persistentVolumeClaim:
-          claimName: elasticsearch-pvc
+  volumes:
+   - name: elasticsearch-config
+     persistentVolumeClaim:
+     claimName: elasticsearch-pvc
