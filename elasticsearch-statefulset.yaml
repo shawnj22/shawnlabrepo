@@ -38,7 +38,12 @@ spec:
         volumeMounts:
         - name: elasticsearch-storage
           mountPath: /usr/share/elasticsearch/data
-  volumeClaimTemplates:
+       env:
+       - name: discovery.type
+         value: single-node
+       - name: ES_JAVA_OPTS
+         value: "-Xms512m -Xmx512m"
+    volumeClaimTemplates:
   - metadata:
       name: elasticsearch-storage
     spec:
