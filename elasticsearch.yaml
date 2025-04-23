@@ -12,7 +12,7 @@ spec:
       port: 9200
       targetPort: 9200
       volumeMounts:
-      - name: elasticsearch-config
+      - name: elastic-config
         mountPath: /config
     volumes:
       - name: elasticsearch-config
