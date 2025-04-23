@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: elasticsearch-lb
   namespace: default  # change if using another namespace
+env: 
   discovery.seed_hosts: ["elasticsearch-0", "elasticsearch-1"]
   cluster.initial_master_nodes: ["elasticsearch-0", "elasticsearch-1"]
 spec:
