@@ -12,7 +12,7 @@ spec:
       port: 9200
       targetPort: 9200
        volumeMounts:
-        - name: homarr-config
+        - name: elasticsearch-config
           mountPath: /config
     volumes:
       - name: elasticsearch-config
