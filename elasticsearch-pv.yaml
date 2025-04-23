@@ -1,0 +1,13 @@
+# pv.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:  # ⚠️ Local-only demo setup
+    path: /mnt/data
+  persistentVolumeReclaimPolicy: Retain
