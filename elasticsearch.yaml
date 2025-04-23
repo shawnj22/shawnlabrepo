@@ -13,7 +13,7 @@ spec:
       targetPort: 9200
       volumeMounts:
       - name: elasticsearch-config
-         mountPath: /config
+        mountPath: /config
     volumes:
       - name: elasticsearch-config
         persistentVolumeClaim:
