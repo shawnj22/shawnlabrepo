@@ -12,5 +12,5 @@ spec:
       port: 9200
       targetPort: 9200
   spec: 
-  discovery.seed_hosts: ["elasticsearch-0", "elasticsearch-1"]
-  cluster.initial_master_nodes: ["elasticsearch-0", "elasticsearch-1"]
+    discovery.seed_hosts: ["elasticsearch-0", "elasticsearch-1"]
+    cluster.initial_master_nodes: ["elasticsearch-0", "elasticsearch-1"]
