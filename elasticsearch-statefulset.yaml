@@ -35,11 +35,6 @@ spec:
               fieldPath: metadata.name
         - name: ES_JAVA_OPTS
           value: "-Xms512m -Xmx512m"
-        env:  
-       - name: discovery.type
-         value: single-node
-       - name: ES_JAVA_OPTS
-         value: "-Xms512m -Xmx512m"
         volumeMounts:
         - name: elasticsearch-storage
           mountPath: /usr/share/elasticsearch/data
