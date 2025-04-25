@@ -1,0 +1,20 @@
+apiVersion: elasticsearch.k8s.elastic.co/v1
+kind: Elasticsearch
+metadata:
+  name: elasticsearch-cluster
+  namespace: default
+spec:
+  version: 8.0.0  # Specify your desired Elasticsearch version
+  nodeSets:
+    - name: default
+      count: 3  # Number of Elasticsearch nodes in the cluster
+      config:
+        node.master: true
+        node.data: true
+        node.ingest: true
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 1Gi  # Adjust the storage size as needed
