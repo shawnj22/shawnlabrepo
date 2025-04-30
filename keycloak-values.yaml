@@ -1,0 +1,20 @@
+replicaCount: 2
+
+postgresql:
+  enabled: true
+  auth:
+    postgresPassword: my-postgres-pass
+    password: keycloak-db-pass
+  architecture: standalone
+
+auth:
+  adminUser: admin
+  adminPassword: admin123
+
+production: true
+proxy: edge
+ingress:
+  enabled: false
+
+service:
+  type: ClusterIP
