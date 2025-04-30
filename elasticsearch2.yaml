@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: elasticsearch
-  namespace: default
+  namespace: elastic-system
 spec:
   selector:
     app: elasticsearch
