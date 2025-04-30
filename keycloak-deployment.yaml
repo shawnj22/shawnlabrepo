@@ -1,0 +1,58 @@
+# keycloak-deployment.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: keycloak
+  namespace: keycloak
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: keycloak
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak
+  namespace: keycloak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keycloak
+  template:
+    metadata:
+      labels:
+        app: keycloak
+    spec:
+      containers:
+        - name: keycloak
+          image: quay.io/keycloak/keycloak:24.0.2
+          args: ["start-dev"]
+          env:
+            - name: DB_VENDOR
+              value: postgres
+            - name: DB_ADDR
+              value: keycloak-postgres
+            - name: DB_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: keycloak-db-secret
+                  key: POSTGRES_DB
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: keycloak-db-secret
+                  key: POSTGRES_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: keycloak-db-secret
+                  key: POSTGRES_PASSWORD
+            - name: KEYCLOAK_ADMIN
+              value: keycloak_admin
+            - name: KEYCLOAK_ADMIN_PASSWORD
+              value: App13pie
+          ports:
+            - containerPort: 8080
