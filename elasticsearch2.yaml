@@ -16,7 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: elasticsearch
-  namespace: default
+  namespace: elastic-system
 spec:
   replicas: 1
   selector:
