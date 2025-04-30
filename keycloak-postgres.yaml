@@ -1,0 +1,47 @@
+# keycloak-postgres.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: keycloak-db-secret
+  namespace: keycloak
+type: Opaque
+stringData:
+  POSTGRES_DB: keycloak_db
+  POSTGRES_USER: keycloak_s1
+  POSTGRES_PASSWORD: keycloak$!
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: keycloak-postgres
+  namespace: keycloak
+spec:
+  ports:
+    - port: 5432
+  selector:
+    app: keycloak-postgres
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak-postgres
+  namespace: keycloak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keycloak-postgres
+  template:
+    metadata:
+      labels:
+        app: keycloak-postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:15
+          envFrom:
+            - secretRef:
+                name: keycloak-db-secret
+          ports:
+            - containerPort: 5432
