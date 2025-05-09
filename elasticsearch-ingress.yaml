@@ -16,4 +16,4 @@ spec:
             name: elasticsearch-ingress
             port:
               number: 9200
-EOF
+
