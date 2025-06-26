@@ -1,1 +1,18 @@
-
+apiVersion: V1
+kind: service
+Metadata:
+  name: my-backend-service  ##very important - proxypass  needs this name
+  labels:
+    app: backend-restapp
+    tier: backend   
+spec:
+  type: #cluster Ip  is a default service
+  selector:
+    app: backend-restapp
+  ports: # list of ports to define 
+    - name: http
+      port: 8080 #clusterIP service port
+      targetPort: 8080 # container Port 
+    - name: https
+      port: 8443
+      targetPort: 8443
