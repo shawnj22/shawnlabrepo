@@ -1,0 +1,14 @@
+api: V1
+kind: services
+metadata: 
+  name: replicaset-nodeport-service
+spec:
+  type: NodePort
+  selector:
+     app: # name of app you are connecting the service to 
+  ports:
+    - name: http 
+       port: 80
+       targetPort: 80
+       nodePort: 31232 #nodeport you want to use
+  
