@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: replicaset
+metadata:
+  name: myapp2-rs
+spec:
+  replicas: 3 
+  Selector:
+    matchlabels:
+      app: myapp2
+  template:
+    metadata:
+      name: myapp2-pod 
+      labels: #Dictionary
+        app: myapp2
+    spec:
+      containers:  #List
+        -name: myapp2 #name of pods same as label app
+         image: #path to image and repo version of image 
+         ports:
+           - containerPort: 80
