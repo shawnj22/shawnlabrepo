@@ -1,0 +1,24 @@
+apiVersion: apps/V1
+kind: Deployment
+Metadata:
+  name: backend-restapp
+  labels:
+    app: backend-restapp
+    tier: backend   
+spec:
+  replicas: 3
+  selector:
+    matchlabels:
+     app: backend-restapp
+  template:
+    Metadata:
+       labels:
+         app: backend-restapp
+         tier: backend
+    spec:
+      containers:
+        - name: backend-restapp
+          image: #image path
+          ports:
+            - containerPort: 8080 # port for containerport
+        
