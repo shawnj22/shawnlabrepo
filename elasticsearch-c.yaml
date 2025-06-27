@@ -13,8 +13,10 @@ spec:
         node.data: true
         node.ingest: true
       volumeClaimTemplate:
+      - metadata:
+          name: elasticsearch-data
         spec:
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
-              storage: 1Gi  # Adjust the storage size as needed
+              storage: 30Gi  # Adjust the storage size as needed
