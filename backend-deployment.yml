@@ -1,15 +1,15 @@
 apiVersion: apps/V1
 kind: Deployment
 Metadata:
-  name: backend-restapp
+  name: backend
   labels:
-    app: backend-restapp
+    app: backend
     tier: backend   
 spec:
   replicas: 3
   selector:
     matchlabels:
-     app: backend-restapp
+     app: backend
   template:
     Metadata:
        labels:
