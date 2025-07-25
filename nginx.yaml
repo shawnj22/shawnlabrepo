@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     run: nginx-yaml
-  name: nginx-yaml
+    name: nginx-yaml
 spec:
   containers:
      - image: nginx
