@@ -8,6 +8,7 @@ metadata:
 spec:
   containers:
      - image: nginx
+       name: nginx
  spec:
   selector:
     app: public-pod
