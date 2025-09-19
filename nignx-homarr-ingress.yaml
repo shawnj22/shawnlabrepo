@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx-homarr-ingress
-  namespace: ingress-
+  name: homarr-ingress
+  namespace: default
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -16,5 +16,5 @@ spec:
             backend:
               service:
                 name: homarr-service
-                port: 80
-                  number: 7575
+                port:
+                  number: 80
