@@ -23,4 +23,4 @@ spec:
       volumes:
       - name: mealie-config
         persistentVolumeClaim:
-          claimName: mealie-data-pvc.yaml
+          claimName: mealie-data-pvc
