@@ -8,5 +8,6 @@ spec:
     app: mealie
   ports:
     - protocol: TCP
-      port: 80
+      port: 9000          
       targetPort: 9000
+   type: LoadBalancer
