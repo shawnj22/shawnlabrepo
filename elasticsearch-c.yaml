@@ -10,3 +10,6 @@ spec:
       count: 3  # Number of Elasticsearch nodes in the cluster
       config:
         node.store.allow_mmap: false
+  volumeClaimTemplates:
+  - spec:
+      storageClassName: standard  # ← must match one from above 
