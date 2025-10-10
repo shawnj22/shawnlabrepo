@@ -11,3 +11,4 @@ spec:
   hostPath:  # ⚠️ Local-only demo setup
     path: /mnt/data
   persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard
