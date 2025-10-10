@@ -4,7 +4,7 @@ metadata:
   name: elasticsearch-cluster
   namespace: default
 spec:
-  version: 8.0.0  # Specify your desired Elasticsearch version
+  version: 9.1.4  # Specify your desired Elasticsearch version
   nodeSets:
     - name: default
       count: 3  # Number of Elasticsearch nodes in the cluster
