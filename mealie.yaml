@@ -15,11 +15,11 @@ spec:
       containers:
       - name: mealie
         image: ghcr.io/ajnart/homarr:latest
-         env:
-           - name : PORT
-             value : "9000"  
+        env:
+          - name : PORT
+            value : "9000"  
         ports:
-        - containerPort: 9000
+          - containerPort: 9000
         volumeMounts:
         - name: mealie-config
           mountPath: /config
