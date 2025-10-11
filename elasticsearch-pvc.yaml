@@ -10,4 +10,5 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: "/mnt/data/elasticsearch"
-  storageClassName: standard  # <-- Make sure this exists
+  spec:
+  storageClassName: local-path-immediate
