@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: multi-service-ingress
+spec:
+  rules:
+    - host: homarr.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: homarr-service
+                port:
+                  number: 7575
+    - host: vault.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: vault-svc
+                port:
+                  number: 8200
