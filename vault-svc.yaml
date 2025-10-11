@@ -4,9 +4,9 @@ metadata:
   name: vault
   namespace: vault
 spec:
-  type: ClusterIP
-  ports:
-    - port: 8200
-      targetPort: 8200
   selector:
-    app: vault
+    app.kubernetes.io/name: vault
+  ports:
+    - protocol: TCP
+      port: 8200
+      targetPort: 8200
