@@ -14,5 +14,5 @@ spec:
         backend:
           service:
             name: homarr
-            port
+            port:
               number: 7575
