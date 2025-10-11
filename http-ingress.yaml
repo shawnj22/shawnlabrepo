@@ -11,7 +11,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: homarr-service
+                name: homarr
                 port:
                   number: 7575
     - host: vault.local
@@ -21,6 +21,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: vault-svc
+                name: vault
                 port:
                   number: 8200
