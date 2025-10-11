@@ -1,11 +1,10 @@
-# pv.yaml
 apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: elasticsearch-pv
 spec:
   capacity:
-    storage: 1Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteOnce
   hostPath:  # ⚠️ Local-only demo setup
