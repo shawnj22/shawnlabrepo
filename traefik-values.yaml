@@ -1,0 +1,24 @@
+service:
+  type: LoadBalancer
+  spec:
+    loadBalancerIP: 192.168.127.2
+    ports:
+      - port: 80
+        targetPort: 80
+        protocol: TCP
+        name: web
+      - port: 443
+        targetPort: 443
+        protocol: TCP
+        name: websecure
+
+ports:
+  web:
+    port: 80
+  websecure:
+    port: 443
+
+ingressClass:
+  enabled: true
+  name: traefik
+  isDefaultClass: true
