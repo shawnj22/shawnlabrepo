@@ -15,4 +15,4 @@ spec:
           service:
             name: homarr
             port:
-              number: 7575
+              number: 80
