@@ -9,7 +9,7 @@ spec:
   - host: homarr.local
     http:
       paths:
-      - path: /
+      - path: /dashboard
         pathType: Prefix
         backend:
           service:
