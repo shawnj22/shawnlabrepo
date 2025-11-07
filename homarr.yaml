@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: pod
 metadata:
   name: homarr
+  namespace: default
 spec:
   replicas: 3
   selector:
