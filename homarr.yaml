@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: app
 kind: pod
 metadata:
   name: homarr
