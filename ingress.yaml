@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: multi-service-ingress
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
+     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: homarr.local
