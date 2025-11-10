@@ -9,7 +9,7 @@ spec:
   - host: homarr.local
     http:
       paths:
-      - path: /
+      - path: /homarr-service
         pathType: Prefix
         backend:
           service:
@@ -19,7 +19,7 @@ spec:
   - host: mealie.local.com
     http:
       paths:
-      - path: /
+      - path: /mealie-service
         pathType: Prefix
         backend:
         service:
