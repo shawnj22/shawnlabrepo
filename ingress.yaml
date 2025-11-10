@@ -22,7 +22,7 @@ spec:
       - path: /mealie-service
         pathType: Prefix
         backend:
-        service:
-          name: mealie-service
-          port:
-          number: 80
+          service:
+             name: mealie-service
+             port:
+               number: 80
