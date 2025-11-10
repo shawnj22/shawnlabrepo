@@ -2,8 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: mealie-ingress
-spec:
-  ingressClassName: nginx
+     annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
   rules:
     - host: mealie.local.com
       http:
