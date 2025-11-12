@@ -8,3 +8,11 @@ spec:
       image: ghcr.io/ajnart/homarr:latest
       ports:
         - containerPort: 7575
+volumeMounts:
+    - mountPath: "/data"
+      name: homarr-storage
+  volumes:
+  - name: homarr-storage
+    persistentVolumeClaim:
+      claimName: homarr-pvc
+
