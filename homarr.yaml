@@ -11,8 +11,8 @@ spec:
      volumeMounts:
        - mountPath: "/data"
           name: homarr-storage
-     volumes:
-       - name: homarr-storage
-         persistentVolumeClaim:
-            claimName: homarr-pvc
+  volumes:
+    - name: homarr-storage
+      persistentVolumeClaim:
+        claimName: homarr-pvc
 
