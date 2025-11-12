@@ -9,10 +9,10 @@ spec:
       ports:
         - containerPort: 7575
      volumeMounts:
-        - mountPath: "/data"
+       - mountPath: "/data"
           name: homarr-storage
      volumes:
-        - name: homarr-storage
-      persistentVolumeClaim:
-          claimName: homarr-pvc
+       - name: homarr-storage
+         persistentVolumeClaim:
+            claimName: homarr-pvc
 
