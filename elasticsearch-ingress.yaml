@@ -7,7 +7,6 @@ metadata:
 spec:
   rules:
   - host: elasticsearch.localhost
-    secretName: elasticsearch-tls
     http:
       paths:
       - path: /
@@ -17,4 +16,8 @@ spec:
             name: elasticsearch
             port:
               number: 9200
-
+    
+  tls:
+  - hosts:
+    - elasticsearch.localhost
+    secretName: elasticsearch-tls
