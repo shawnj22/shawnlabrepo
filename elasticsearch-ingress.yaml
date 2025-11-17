@@ -7,7 +7,7 @@ metadata:
 spec:
   rules:
   - host: elasticsearch.localhost
-    https:
+    http:
       paths:
       - path: /
         pathType: Prefix
