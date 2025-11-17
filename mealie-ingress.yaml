@@ -4,6 +4,7 @@ metadata:
   name: mealie-ingress
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
+spec:    
   rules:
     - host: mealie.local.com
       http:
