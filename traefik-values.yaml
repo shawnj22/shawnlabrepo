@@ -9,3 +9,21 @@ ports:
     expose:
       default: true
     protocol: TCP
+
+# Keep your existing metrics and dashboard settings
+metrics:
+  prometheus:
+    entryPoint: metrics
+
+additionalArguments:
+  - "--api.dashboard=true"
+  - "--ping=true"
+  - "--metrics.prometheus=true"
+  - "--providers.kubernetescrd"
+  - "--providers.kubernetescrd.allowEmptyServices=true"
+  - "--providers.kubernetesingress"
+  - "--providers.kubernetesingress.allowEmptyServices=true"
+  - "--providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik"
+  - "--entryPoints.websecure.http.tls=true"
+  - "--log.level=INFO"
+
